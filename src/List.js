@@ -9,8 +9,8 @@ function List({items, removeItem, editItem}) {
                     return <article className='item' key={item.id}>
                         <p>{item.title}</p>
                         <div className='btn-container'>
-                            <button onClick={()=> editItem(item.id)} className='btn'><FaPencilAlt/></button>
-                            <button onClick={() => removeItem(item.id)} className='btn'><FaTrash/></button>
+                            <button onClick={()=> editItem(item.id)} className='btn edit'><FaPencilAlt/></button>
+                            <button onClick={() => removeItem(item.id)} className='btn trash'><FaTrash/></button>
                         </div>
                     </article>
                 })

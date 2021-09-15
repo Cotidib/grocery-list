@@ -1,7 +1,7 @@
 import List from './List';
 import Alert from './Alert';
 import React, { useState, useEffect } from 'react';
-
+import { FaPencilAlt } from 'react-icons/fa';
 
 const getLocalStorate = () => {
   let list = localStorage.getItem('list');
@@ -61,7 +61,7 @@ function App() {
   }
 
   const removeItem = (id) => {
-    showAlert(true, 'item removed', 'success');
+    showAlert(true, 'item removed', 'danger');
     let newList = list.filter((item)=> item.id !== id);
     setList(newList);
   }
@@ -82,17 +82,20 @@ function App() {
     <main>
       <form onSubmit={handleSubmit}>
         {alert.show && <Alert {...alert} removeAlert={showAlert} list={list}/>}
-        <h3>grocery bud</h3>
+        <div>
+          <h3>grocery bud</h3>
+          <div className='line'/>
+        </div>
         <div className='form-control'>
           <input type='text' value={itemName} onChange={(e)=>setItemName(e.target.value)} placeholder='e.g. cookies'/>
-          <button type='submit'>{editMode? 'edit':'submit'}</button>
+          <button className='btn-submit' type='submit'>{editMode? 'edit':'add'}</button>
         </div>
       </form>
       {
         list.length > 0 && (
-        <div>
+        <div className='content-container'>
           <List items={list} removeItem={removeItem} editItem={editItem}/>
-          <button onClick={clearList}>clear</button>
+          <button className='btn-clear' onClick={clearList}>clear</button>
         </div>
         )
       }
