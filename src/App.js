@@ -1,7 +1,6 @@
 import List from './List';
 import Alert from './Alert';
 import React, { useState, useEffect } from 'react';
-import { FaPencilAlt } from 'react-icons/fa';
 
 const getLocalStorate = () => {
   let list = localStorage.getItem('list');
