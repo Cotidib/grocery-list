@@ -1,7 +1,7 @@
 # grocery-list
 Practice project made with React Js and React Hooks
 
-This is my version of the Color Generator project in ['Code 15 React Projects' course by John Smilga](https://youtu.be/a_7Z7C_JCyo).
+This is my version of the Grocery Bud project in ['Code 15 React Projects' course by John Smilga](https://youtu.be/a_7Z7C_JCyo).
 
 ### Overview and Learnings
 
